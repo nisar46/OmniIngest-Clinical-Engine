@@ -1,5 +1,5 @@
-# 🏥 OmniIngest Phase 0.3: Enterprise Clinical Gateway
-> **Status: Final Release | High-Performance Clinical Ingestion Core**
+# ⚙️ OmniIngest: High-Performance Clinical Data Engine
+> **Status: Phase 0.3 Hardened | Enterprise Clinical Ingestion Core**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
 ![Rust](https://img.shields.io/badge/Engine-Rust_Accelerated-black.svg?style=for-the-badge&logo=rust)
@@ -7,49 +7,36 @@
 ![Security](https://img.shields.io/badge/DPDP-Rule_8.3_Kill_Switch-red.svg?style=for-the-badge)
 
 ## ⚡ Executive Summary
-**OmniIngest Phase 0.3** is a high-performance clinical data engine designed to solve the "Dark Data" crisis in global healthcare. It transforms fragmented, unstructured clinical records (PDF, CSV, HL7) into type-safe, **ABDM-compliant** streams. 
+**OmniIngest** is a high-performance clinical data engine designed to solve the "Dark Data" crisis in fragmented healthcare environments. It transforms unstructured clinical records (PDF, CSV, HL7) into type-safe, **ABDM-compliant** streams. 
 
-Built with a **Rust-based processing core**, Phase 0.3 delivers enterprise-grade normalization at scale, serving as the foundational layer for the next generation of **Universal Health Intelligence** applications.
+Built with a **Privacy-by-Design** philosophy, OmniIngest delivers enterprise-grade normalization at scale, serving as the foundational layer for high-integrity **Universal Health Intelligence** applications.
 
 ---
 
-## 💎 Phase 0.3 Key Technical Pillars
+### 🏛️ Core Architecture: The 7-Pillar Vault
+The engine ingests fragmented legacy records into a structured relational vault:
+1. **Demographics:** PII-isolated identity management.
+2. **Encounters:** Clinical visit metadata.
+3. **Observations:** Vitals and diagnostic results.
+4. **Medications:** FHIR-compliant pharmacy streams.
+5. **Diagnostics:** Lab and imaging records.
+6. **Finance:** Billing and insurance mapping.
+7. **Governance:** Audit trails and DPDP-compliant logs.
 
-### 1. Rust-Accelerated "Dark Data" Rescue
-Under the hood, OmniIngest uses **Polars** (Rust-based) for deterministic data normalization, achieving near C-level speeds when processing massive clinical legacy files.
+---
 
-### 2. The Semantic Bridge
-Phase 0.3 introduces the **Reasoning Layer preparation**—ensuring every piece of ingested data is mapped to **HL7 FHIR R5** standards, making clinical logic accessible and auditable.
-
-### 3. The DPDP "Kill Switch" (Rule 8.3)
+### 🛡️ Privacy & Compliance (DPDP Act Rule 8.3)
 Compliance is baked into the architecture:
-- **Autonomous Shredding**: Immediate cryptographic erasure of PII.
-- **Rule 8.3 Logging**: Real-time governance logs ensuring that Data Principal rights (Right to Erasure) are respected natively in the code.
+- **Autonomous Shredding**: Logic-based cryptographic erasure of PII.
+- **Rule 8.3 Governance**: Real-time audit logs ensuring that Data Principal rights (Right to Erasure) are respected natively.
+- **Interoperability**: Designed for **HL7 FHIR R5** compliance to bridge the gap between rural clinics and global registries.
 
 ---
 
-## 🏗️ Technical Architecture
-
-| Component | Technology | Role |
-| :--- | :--- | :--- |
-| **Ingestion Engine** | `Polars` (Rust-based) | High-performance normalization. |
-| **Persistence** | `SQLite` | Enterprise-grade state management. |
-| **Compliance** | `fhir.resources` | Strict FHIR R5 schema validation. |
-| **Governance** | `DPDP Logic` | Automated PII purge & Rule 8 compliance. |
-
----
-
-## 📜 Regulatory Alignment
-- **ABDM 2.0**: Health Information Provider (HIP) compliance.
-- **DPDP Act 2023**: Hard-coded strict adherence to Rule 8.3 (Right to Erasure).
-- **Medical Law (IIT-KGP)**: Architecture verified against Bioethics and Regulatory standards.
-
----
-
-## 🚀 Launch the Foundation
+## 🚀 Get Started
 1. **Clone & Setup**
    ```bash
-   git clone https://github.com/nisar46/OmniIngest-ABDM-2.0_Phase_0.1.git
+   git clone https://github.com
    pip install -r requirements.txt
    ```
 2. **Execute**
@@ -61,10 +48,8 @@ Compliance is baked into the architecture:
 
 ## 👨‍💻 Author & Architect
 **Nisar Ahmed**  
-*Senior Agentic Solutions Architect | Solutions Orchestrator*  
-[LinkedIn Profile](https://linkedin.com/in/nisar-ahmed-8440763a3)
-
-> *"Building the 'Google' for Reliable Healthcare Data."*
+*Clinical Solutions Architect | 13+ Years Healthcare Expert*  
+[LinkedIn Profile](https://www.linkedin.com/in/nisar-ahmed-8440763a3)
 
 ---
 *© 2026 Nisar Ahmed. Licensed under MIT.*
