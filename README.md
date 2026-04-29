@@ -2,7 +2,6 @@
 > **Status: Phase 0.3 Hardened | Enterprise Clinical Ingestion Core**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
-![Rust](https://img.shields.io/badge/Engine-Rust_Accelerated-black.svg?style=for-the-badge&logo=rust)
 ![Governance](https://img.shields.io/badge/Governance-ABDM_Native-0284C7.svg?style=for-the-badge)
 ![Security](https://img.shields.io/badge/DPDP-Rule_8.3_Kill_Switch-red.svg?style=for-the-badge)
 
