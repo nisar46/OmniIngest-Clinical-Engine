@@ -1,4 +1,4 @@
-# 🏥 OmniIngest ABDM 2.0: The "Safety Rails" for Digital Health
+# 🏗️ Phase 0.2: The Orchestration Layer (Specialized Engineering)
 > **Phase 0.2 | Governance Layer (Budget 2026 Update): Feb 01, 2026**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
