@@ -57,7 +57,7 @@ Compliance is baked into the architecture:
 ## 🚀 Launch the Foundation
 1. **Clone & Setup**
    ```bash
-   git clone https://github.com/nisar46/OmniIngest-ABDM-2.0_Phase_0.1.git
+   git clone https://github.com
    pip install -r requirements.txt
    ```
 2. **Execute**
