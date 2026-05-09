@@ -1,0 +1,42 @@
+{
+    "mappings": {
+        "disease_name": [
+            "disease_name"
+        ],
+        "disease_url": [
+            "disease_url"
+        ],
+        "med_name": [
+            "med_name"
+        ],
+        "final_price": [
+            "final_price"
+        ],
+        "price": [
+            "price"
+        ],
+        "drug_varient": [
+            "drug_varient"
+        ],
+        "drug_manufacturer": [
+            "drug_manufacturer"
+        ],
+        "drug_content": [
+            "drug_content"
+        ],
+        "img_urls": [
+            "img_urls"
+        ]
+    },
+    "pillar_map": {
+        "disease_name": "Visits",
+        "disease_url": "Medications",
+        "med_name": "Medications",
+        "final_price": "Insurance",
+        "price": "Insurance",
+        "drug_varient": "Medications",
+        "drug_manufacturer": "Providers",
+        "drug_content": "Medications",
+        "img_urls": "LabResults"
+    }
+}
