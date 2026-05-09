@@ -1,38 +1,53 @@
-# 🏥 OmniIngest Phase 0.3: The Orchestration Foundation
-> **Status: Final Release | The Gateway to ORCHESTRA™**
+# 🏥 OmniIngest ABDM 2.0: The "Safety Rails" for Digital Health
+> **Phase 0.2 | Governance Layer (Budget 2026 Update): Feb 01, 2026**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
-![Rust](https://img.shields.io/badge/Engine-Rust_Accelerated-black.svg?style=for-the-badge&logo=rust)
-![Governance](https://img.shields.io/badge/Governance-ORCHESTRA_Native-0284C7.svg?style=for-the-badge)
+![Standard](https://img.shields.io/badge/ABDM-NRCeS_Compliant-green.svg?style=for-the-badge)
 ![Security](https://img.shields.io/badge/DPDP-Rule_8.3_Kill_Switch-red.svg?style=for-the-badge)
+![Governance](https://img.shields.io/badge/Governance-Compliance_Engine_v0.2-purple.svg?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=nisar46%2FOmnigest_ABDM_2.0&label=Views&labelColor=%232c3e50&countColor=%23008080&style=flat)
 
 ## ⚡ Executive Summary
-**OmniIngest Phase 0.3** is the high-performance core of the **ORCHESTRA™** ecosystem. It is designed to solve the "Dark Data" crisis in global healthcare by transforming fragmented, unstructured clinical records into type-safe, **ABDM-compliant** streams. 
+**OmniIngest ABDM 2.0** is the architectural backbone for modern clinical data ingestion in India's federated health ecosystem. 
 
-Built with a **Rust-based processing core**, Phase 0.3 moves beyond simple ingestion into **Agentic Orchestration**, serving as the foundational gateway for the upcoming **Universal Health Intelligence** platform.
+**v0.2 Update (Feb 2026):** In response to the **Union Budget 2026 mandates** for "AI Public Infrastructure," this version introduces a dedicated **Compliance Engine** (`compliance_engine.py`) that enforces:
+1.  **Pseudonymization by Design:** Cryptographic hashing of PII for population health analytics.
+2.  **Auditability:** Immutable logging of data access/purges for government transparency requirements.
+
+### 📉 The 5-Year Practical Journey
+This software is grounded in **5 years of operational fieldwork**. Between 2020 and 2025, I handled thousands of data entry challenges in **rural Bangalore healthcare**. 
+
+👉 *Explore the full analysis of those 5 years in my detailed portfolio: [Healthcare-Data-Analysis-Journey](https://github.com/nisar46/Healthcare-Data-Analysis-Journey)*
+
+It solves the critical "Last Mile" problem of interoperability: taking messy, unstructured legacy hospital data (CSV, PDF, HL7) and transforming it into **FHIR R5** compliant bundles, while strictly adhering to India's **DPDP Act 2023** (Digital Personal Data Protection Act).
+
+<!-- Video Removed to reduce repo size. See LinkedIn post for demo. -->
 
 ---
 
-## 🚀 The Evolution to ORCHESTRA™
-Phase 0.3 marks the completion of the Ingestion Layer. We are now evolving into **ORCHESTRA™**, a multi-agent system that conducts clinical data across three major verticals:
-1.  **Pharma MNCs**: Real-World Evidence (RWE) engines.
-2.  **Insurance**: Automated Claims Integrity & Fraud Audit.
-3.  **Hospitals**: The Clinical Reliability Shield (Zero-Error prescriptions).
+## 💎 Critical Features
 
----
+### 1. The "ChatGPT Health" Experience
+Phase 0.1 introduces a radical shift in clinical UX. We moved away from sterile, grey enterprise dashboards to a **"Vibe-Coded"** interface:
+- **Teal & Dark Mode**: Reduced eye strain for 24/7 clinical operations, inspired by premium GenAI tools.
+- **Glassmorphism Metrics**: Real-time floating compliance cards.
+- **Interactive "Sandbox Mode"**: One-click generation of 1000+ synthetic patient records for stress-testing.
 
-## 💎 Phase 0.3 Key Technical Pillars
+![Clinical Dashboard](docs/assets/clinical_dashboard.png)
 
-### 1. Rust-Accelerated "Dark Data" Rescue
-Under the hood, OmniIngest uses **Polars** (Rust-based) for deterministic data normalization, achieving near C-level speeds when processing massive clinical legacy files (PDF, CSV, HL7, DICOM).
+### 2. Guardrails: The Rule 8.3 Kill Switch
+Compliance is not a checkbox; it is code.
+- **Cryptographic Shredding**: Implements a dedicated "Kill Switch" that overrides retention policies for immediate PII erasure.
+- **Audit Lineage**: Even when data is purged, the *fact* of the purge is cryptographically logged in `audit_2026.json` with a unique Audit ID, ensuring regulatory transparency without retaining the sensitive data itself.
+- **Visual Feedback**: The UI actively demonstrates the shredding process with a 3-step visible governance log.
 
-### 2. The Semantic Bridge
-Phase 0.3 introduces the **Reasoning Layer prep**—ensuring every piece of ingested data is mapped to **HL7 FHIR R5** standards, making it "readable" by the next generation of Agentic RAG systems.
+![Rule 8.3 Kill Switch](docs/assets/rule_8_3_log.png)
 
-### 3. The DPDP "Kill Switch" (Rule 8.3)
-Compliance is baked into the architecture:
-- **Autonomous Shredding**: Immediate cryptographic erasure of PII.
-- **Rule 8.3 Logging**: Real-time governance logs ensuring that Data Principal rights are respected natively in the code.
+### 3. Zero-Failure Smart Ingress
+The `ingress.py` engine is built to never crash:
+- **Universal Field Recovery**: If standard column mapping fails, the engine scans the entire file content using regex patterns to "rescue" critical identifiers like ABHA IDs.
+- **Format Agnostic**: Seamlessly handles JSON, XML, XL7, FHIR, PDF, and deeply nested CSVs.
 
 ---
 
@@ -40,40 +55,54 @@ Compliance is baked into the architecture:
 
 | Component | Technology | Role |
 | :--- | :--- | :--- |
-| **Ingestion Engine** | `Polars` (Rust-based) | High-performance normalization. |
-| **Persistence** | `SQLite` | Enterprise-grade state management. |
+| **Ingestion Engine** | `Polars` (Rust-based) | High-performance data cleaning & normalization. |
+| **Logic Layer** | Python 3.10 | Business logic, Rule 8 enforcement. |
 | **Compliance** | `fhir.resources` | Strict FHIR R5 schema validation. |
-| **Orchestration** | `Agentic Gateway` | Semantic routing preparation. |
+| **Interface** | `Streamlit` | Rapid, reactive UI/UX. |
 
 ---
 
-## 📜 Regulatory Alignment
-- **ABDM 2.0**: Health Information Provider (HIP) compliance.
-- **DPDP Act 2023**: Hard-coded strict adherence to Rule 8.3 (Right to Erasure).
-- **Medical Law (IIT-KGP)**: Architecture verified against Bioethics and Regulatory standards.
+## 📜 Regulatory alignment
+This project is engineered to align with:
+- **ABDM Standards**: Specifically the *Health Information Provider (HIP)* guidelines.
+- **NRCeS**: Adopts the latest National Resource Centre for EHR Standards recommendations.
+- **DPDP Act 2023**: Hard-coded strict adherence to Data Principal rights (Right to Erasure).
+
+👉 *See [docs/COMPLIANCE.md](docs/COMPLIANCE.md) for a deep dive.*  
+👉 *See [docs/TECH_STACK.md](docs/TECH_STACK.md) for architecture details.*
 
 ---
 
-## 🚀 Launch the Foundation
-1. **Clone & Setup**
+## 🚀 Installation & Launch
+
+### Prerequisites
+- Python 3.10+
+- `pip`
+
+### Setup
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/nisar46/OmniIngest-Clinical-Engine.git
-   pip install -r requirements.txt
-   
+   git clone https://github.com/nisar46/OmniIngest-ABDM-2.0_Phase_0.1.git
+   cd OmniIngest-ABDM-2.0_Phase_0.1
    ```
-2. **Execute**
+
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Launch the Console**
    ```bash
    streamlit run app.py
    ```
 
 ---
 
-## 👨‍💻 Author & Architect
-**Nisar Ahmed**  
-*Senior Agentic Solutions Architect | Solutions Orchestrator*  
-[LinkedIn Profile](https://linkedin.com/in/nisar-ahmed-8440763a3)
+## 👨‍💻 Author
+**Nisar Ahmed**
+*Senior Health-Tech Architect*
 
-> *"Building the 'Google' for Reliable Healthcare Data—Universal Intelligence. Orchestrated."*
+> "Building the digital nervous system for India's healthcare future."
 
 ---
 *© 2026 Nisar Ahmed. Licensed under MIT.*
