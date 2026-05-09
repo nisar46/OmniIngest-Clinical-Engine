@@ -13,7 +13,7 @@ In Phase 0.2, I refactored the initial "Monolith" into a modular **Orchestration
 ### 📉 The 6-Year Practical Journey
 This software is grounded in **6 years of clinical data operations (2020–2026)**. Having handled thousands of real-world records at **Rural Healthcare Setups**, I designed this layer to solve the "Last Mile" problem: transforming messy, unstructured hospital data into **FHIR R5** compliant bundles.
 
-👉 *Explore my full 6-year professional evolution: [Clinical-Research-Archive](https://github.com)*
+👉 *Explore my full 6-year professional evolution: https://github.com/nisar46/Clinical-Research-Archive*
 
 ---
 
