@@ -6,8 +6,8 @@ from thefuzz import process
 
 # --- PILLAR 1: ARCHITECTURAL CONFIG ---
 VALID_PILLARS = ["Patients", "Providers", "Visits", "Medications", "LabResults", "Insurance", "Ingress_Logs"]
-KB_PATH = r'D:\Omnigest_ABDM_2.0\Phase_0.3\src\schema_kb.json'
-DB_PATH = r'D:\Omnigest_ABDM_2.0\Phase_0.3\src\omniingest.db'
+KB_PATH = 'schema_kb.json'
+DB_PATH = 'omniingest.db'
 
 def load_brain():
     with open(KB_PATH, 'r') as f:
