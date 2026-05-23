@@ -55,7 +55,6 @@ The `ingress.py` engine is built for the "Ground Truth" of hospital data:
    cd OmniIngest-Clinical-Engine/Phase_0.2
    pip install -r requirements.txt
    streamlit run app.py
-   ---
 
 ## 👨💻 Developer & Data Specialist
 **Nisar Ahmed**  
