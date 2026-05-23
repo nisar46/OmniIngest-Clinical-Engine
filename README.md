@@ -40,9 +40,13 @@ Compliance is baked into the data pipeline:
    streamlit run app.py
 
 
-👨💻 Developer & Data Specialist
-Nisar Ahmed
-Clinical Data Specialist | 13+ Years Healthcare Expert
-LinkedIn Profile
+---
 
-© 2026 Nisar Ahmed. Licensed under MIT.
+## 👨💻 Developer & Data Specialist
+**Nisar Ahmed**  
+*Clinical Data Specialist | 13+ Years Healthcare Expert*  
+[LinkedIn Profile](https://www.linkedin.com/in/nisar-ahmed-8440763a3)
+
+---
+*© 2026 Nisar Ahmed. Licensed under MIT.*
+
