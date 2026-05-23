@@ -83,7 +83,8 @@ This pipeline is engineered to align with:
 
 ## 👨💻 Developer & Data Specialist
 **Nisar Ahmed**  
-*Clinical Data Specialist 
+*Clinical Data Specialist*
+
 "Building the data pipelines for India's healthcare future."
 
 ---
