@@ -34,10 +34,12 @@ Compliance is baked into the data pipeline:
 
 ## 🚀 Get Started
 1. **Clone & Setup**
-   ```bash
+    ```bash
    git clone https://github.com/nisar46/OmniIngest-Clinical-Engine.git
    pip install -r requirements.txt
-streamlit run app.py
+   streamlit run app.py
+
+
 👨💻 Developer & Data Specialist
 Nisar Ahmed
 Clinical Data Specialist | 13+ Years Healthcare Expert
