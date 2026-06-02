@@ -22,23 +22,23 @@ This software is grounded in **5 years of clinical operations fieldwork** handli
 
 ## 💎 Critical Enterprise Features
 
-### 1. Interactive Validation-First Workspace (New)
+### 1. Interactive Validation-First Workspace 
 Moved completely away from static, passive graph-reporting to an active data remediation pipeline:
 - **Executive Operations Matrix**: Basic bar charts are replaced by real-time metric cards tracking Pipeline Throughput Rate, Revenue Under Operational Hold, and Active Identity Firewall Blocks.
 - **Validation-First Logic**: Harsh, definitive warnings are replaced by an auditing flag (**`PENDING_CLINICAL_AUDIT`**). High-value billing entries lacking explicit surgical confirmation are quietly routed for clinical correlation rather than triggering false-positive alerts.
 
-### 2. Absolute Input Lockdown & Security (New)
+### 2. Absolute Input Lockdown & Security 
 Data correction is built to be secure and bulletproof against administrative error:
 - **Cell-Level Freezing**: Inside the interactive editing tables (`st.data_editor`), all metadata, unique hashes, system timestamps, and calculated fields are frozen via explicit column configurations (`disabled=True`).
 - **Targeted Operator Overrides**: Operators can only edit exactly four required operational target fields (`ABHA_ID`, `Patient_Name`, `Clinical_Payload`, and `Bill_Amount`).
 - **High-Visibility Row Highlights**: An entire row lights up in a high-contrast amber tone if an active validation block is present, focusing operator attention precisely on what needs to be changed.
 
-### 3. Silent Bidirectional Storage Sync (New)
+### 3. Silent Bidirectional Storage Sync
 When data is corrected, the workspace acts completely frictionlessly like an automated sheet:
 - **Silent SQL Persistence**: Saving a record bypasses slow text pop-ups and toasts, running a clean SQL `UPDATE` statement against the local SQLite instance using the uneditable `Notice_ID` as the immutable primary key.
 - **Instant State Cleansing**: The memory cache is instantly dropped and refreshed via `st.rerun()`. Corrected rows quietly and seamlessly vanish from the Quarantine pool and reappear in the clean **FHIR R5 Validated Data Stream** instantly.
 
-### 4. Overlapping Category Filters (New)
+### 4. Overlapping Category Filters 
 To support multi-department compliance tracking, data segregation logic relies on independent boolean vectors:
 - **Shared Identity Risk Routing**: Missing or invalid 14-digit ABHA tokens are mapped across **both** the `PRIVACY_SHIELD` (as identity failure is a data privacy threat) and the `CLINICAL_VOID` tabs. If a record fails both clinical audit and identity checks, it dynamically scales into a combined hybrid label, keeping data fully visible to both clinical auditors and privacy officers simultaneously.
 
