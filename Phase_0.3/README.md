@@ -1,10 +1,10 @@
 # 🏥 OmniIngest ABDM 2.0: The "Safety Rails" for Digital Health
 > **Phase 2.0 | Production-Grade Interactive Governance Layer: June 2026**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
+[Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
 ![Standard](https://img.shields.io/badge/ABDM-NRCeS_Compliant-green.svg?style=for-the-badge)
 ![Security](https://img.shields.io/badge/DPDP-Rule_8.3_Kill_Switch-red.svg?style=for-the-badge)
-![Governance](https://shields.io)
+![Governance](https://img.shields.io/badge/Governance-Compliance_Engine_v0.3-purple.svg?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=nisar46%2FOmnigest_ABDM_2.0&label=Views&labelColor=%232c3e50&countColor=%23008080&style=flat)
 
