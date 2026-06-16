@@ -1,0 +1,26 @@
+patient_name,abha_id,clinical_payload,bill_amount,consent_status,notice_id,notice_date,data_purpose
+Patient_1_7470,38-9130-1869-7663,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1873.75,ACTIVE,N-2026-CONS-v1.1-7470-0,2026-02-02,Treatment
+Patient_2_6231,55-4947-1110-9448,"{""diagnosis"": ""Fever"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",850.73,ACTIVE,N-2026-CONS-v1.6-6231-1,2025-11-15,Audit
+Patient_3_8759,,Standard clinical examination.,1750.89,ACTIVE,N-2026-CONS-v1.7-8759-2,2025-07-05,Treatment
+Patient_4_9774,72-1002-9576-4657,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1504.49,ACTIVE,N-2026-CONS-v1.9-9774-3,2025-07-16,Treatment
+Patient_5_5130,21-8629-6857-5500,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",853.66,ACTIVE,N-2026-CONS-v1.5-5130-4,2025-08-10,Audit
+Patient_6_7633,ABHA-118,Standard clinical examination.,1234.98,ACTIVE,N-2026-CONS-v1.5-7633-5,2026-02-27,Emergency Care
+Patient_7_2717,99-4893-4713-7514,Standard clinical examination.,753.22,REVOKED,N-2026-CONS-v1.1-2717-6,2025-07-06,Emergency Care
+Patient_8_5951,29-7398-8071-3912,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1354.22,ACTIVE,N-2026-CONS-v1.6-5951-7,2025-11-29,Treatment
+Patient_9_9520,63-5105-8567-6379,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1617.56,ACTIVE,N-2026-CONS-v1.2-9520-8,2025-10-13,Treatment
+Patient_10_2120,67-5223-9931-9141,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1716.38,ACTIVE,N-2026-CONS-v1.3-2120-9,2026-04-08,Audit
+Patient_11_3041,84-6052-6602-4244,"{""diagnosis"": ""Diabetes"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1187.84,ACTIVE,N-2026-CONS-v1.3-3041-10,2025-12-31,Audit
+Patient_12_3687,80-7622-6650-4037,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1746.29,ACTIVE,N-2026-CONS-v1.6-3687-11,2025-07-23,Audit
+Patient_13_1008,35-6710-9267-7385,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1733.72,ACTIVE,N-2026-CONS-v1.2-1008-12,2025-10-21,Audit
+Patient_14_9284,48-2633-8394-1303,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1819.92,ACTIVE,N-2026-CONS-v1.4-9284-13,2026-04-13,Consultation
+Patient_15_2664,71-1792-6248-1327,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",523.78,ACTIVE,N-2026-CONS-v1.4-2664-14,2025-08-13,Consultation
+Patient_16_5494,85-2221-7790-4542,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",950.51,ACTIVE,N-2026-CONS-v1.9-5494-15,2026-03-18,Consultation
+Patient_17_3468,33-2357-5624-3603,"{""diagnosis"": ""Diabetes"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1358.22,ACTIVE,N-2026-CONS-v1.0-3468-16,2025-06-19,Consultation
+Patient_18_2548,82-4691-2748-6998,"{""diagnosis"": ""Fever"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1900.1,ACTIVE,N-2026-CONS-v1.6-2548-17,2025-08-26,Audit
+Patient_19_3531,15-8595-7976-5576,"{""diagnosis"": ""Fever"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1432.89,ACTIVE,N-2026-CONS-v1.1-3531-18,2026-03-12,Emergency Care
+Patient_20_9747,28-9463-8983-3177,"{""diagnosis"": ""Asthma"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1697.33,ACTIVE,N-2026-CONS-v1.6-9747-19,2025-11-15,Treatment
+Patient_21_6134,87-3609-6542-5682,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1792.13,ACTIVE,N-2026-CONS-v1.7-6134-20,2025-07-21,Consultation
+Patient_22_8986,24-1754-6349-8858,"XYZ-LOG: No clinical notes available, unknown condition.",4015.03,ACTIVE,N-2026-CONS-v1.6-8986-21,2025-09-25,Consultation
+Patient_23_4392,36-8545-6989-7555,"{""diagnosis"": ""Fever"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",688.01,ACTIVE,N-2026-CONS-v1.2-4392-22,2026-03-16,Treatment
+Patient_24_1060,76-3504-1972-4958,"{""diagnosis"": ""Diabetes"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",1380.18,ACTIVE,N-2026-CONS-v1.8-1060-23,2025-05-19,Emergency Care
+Patient_25_1958,77-1825-9348-1307,"{""diagnosis"": ""Hypertension"", ""treatment"": ""Prescribed rest"", ""visit_type"": ""OPD""}",655.57,ACTIVE,N-2026-CONS-v1.3-1958-24,2025-04-11,Emergency Care

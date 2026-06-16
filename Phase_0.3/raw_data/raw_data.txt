@@ -1,0 +1,160 @@
+Patient Name: Patient_1_9426
+ABHA ID: 37-3075-5516-9141
+Notice ID: N-2026-CONS-v1.0-9426-0
+Notice Date: 2025-05-18
+Bill Amount: 1395.72
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Fever", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_2_6642
+ABHA ID: 56-7850-4918-6619
+Notice ID: N-2026-CONS-v1.2-6642-1
+Notice Date: 2026-05-16
+Bill Amount: 1436.09
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Diabetes", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_3_4244
+ABHA ID: 84-4578-9643-7246
+Notice ID: N-2026-CONS-v1.9-4244-2
+Notice Date: 2026-05-26
+Bill Amount: 1767.96
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_4_9383
+ABHA ID: 19-9270-5363-4248
+Notice ID: N-2026-CONS-v1.4-9383-3
+Notice Date: 2025-07-03
+Bill Amount: 1221.73
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_5_2315
+ABHA ID: 23-5524-7813-2253
+Notice ID: N-2026-CONS-v1.5-2315-4
+Notice Date: 2026-02-24
+Bill Amount: 1547.91
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_6_7123
+ABHA ID: 25-1704-1991-6328
+Notice ID: N-2026-CONS-v1.4-7123-5
+Notice Date: 2025-12-30
+Bill Amount: 1808.06
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Diabetes", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_7_4070
+ABHA ID: 95-7945-6765-6020
+Notice ID: N-2026-CONS-v1.6-4070-6
+Notice Date: 2026-03-07
+Bill Amount: 832.41
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Hypertension", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_8_5731
+ABHA ID: 76-3617-5005-5354
+Notice ID: N-2026-CONS-v1.6-5731-7
+Notice Date: 2025-12-18
+Bill Amount: 1986.94
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Fever", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_9_9902
+ABHA ID: ABHA-319
+Notice ID: N-2026-CONS-v1.6-9902-8
+Notice Date: 2025-06-03
+Bill Amount: 1206.7
+Consent Status: ACTIVE
+Clinical Payload: Standard clinical examination.
+==================================================
+Patient Name: Patient_10_7398
+ABHA ID: 86-4157-9954-5850
+Notice ID: N-2026-CONS-v1.7-7398-9
+Notice Date: 2025-05-26
+Bill Amount: 1994.52
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Fever", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_11_4287
+ABHA ID: 94-1558-2035-6733
+Notice ID: N-2026-CONS-v1.1-4287-10
+Notice Date: 2026-03-13
+Bill Amount: 998.78
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Diabetes", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_12_7939
+ABHA ID: None
+Notice ID: N-2026-CONS-v1.3-7939-11
+Notice Date: 2025-09-26
+Bill Amount: 1923.23
+Consent Status: ACTIVE
+Clinical Payload: Standard clinical examination.
+==================================================
+Patient Name: Patient_13_1503
+ABHA ID: 61-1293-7364-4370
+Notice ID: N-2026-CONS-v1.7-1503-12
+Notice Date: 2025-05-03
+Bill Amount: 917.29
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_14_9460
+ABHA ID: 76-6427-2832-9595
+Notice ID: N-2026-CONS-v1.9-9460-13
+Notice Date: 2025-06-12
+Bill Amount: 1685.0
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Hypertension", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_15_3103
+ABHA ID: 13-5185-4075-2896
+Notice ID: N-2026-CONS-v1.5-3103-14
+Notice Date: 2025-10-04
+Bill Amount: 4605.65
+Consent Status: ACTIVE
+Clinical Payload: XYZ-LOG: No clinical notes available, unknown condition.
+==================================================
+Patient Name: Patient_16_1092
+ABHA ID: 37-2936-2684-8978
+Notice ID: N-2026-CONS-v1.0-1092-15
+Notice Date: 2025-05-03
+Bill Amount: 1806.54
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_17_3806
+ABHA ID: 87-7755-9262-7849
+Notice ID: N-2026-CONS-v1.8-3806-16
+Notice Date: 2025-04-06
+Bill Amount: 1280.08
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Fever", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_18_7825
+ABHA ID: 45-4480-3796-4295
+Notice ID: N-2026-CONS-v1.7-7825-17
+Notice Date: 2026-03-23
+Bill Amount: 1562.89
+Consent Status: ACTIVE
+Clinical Payload: {"diagnosis": "Hypertension", "treatment": "Prescribed rest", "visit_type": "OPD"}
+==================================================
+Patient Name: Patient_19_8988
+ABHA ID: ABHA-138
+Notice ID: N-2026-CONS-v1.3-8988-18
+Notice Date: 2026-03-02
+Bill Amount: 879.48
+Consent Status: ACTIVE
+Clinical Payload: Standard clinical examination.
+==================================================
+Patient Name: Patient_20_1043
+ABHA ID: ABHA-334
+Notice ID: N-2026-CONS-v1.2-1043-19
+Notice Date: 2025-06-15
+Bill Amount: 1990.39
+Consent Status: ACTIVE
+Clinical Payload: Standard clinical examination.
+==================================================

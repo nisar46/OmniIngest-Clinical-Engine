@@ -1,0 +1,66 @@
+(0010,0010) Patient Name: Patient_1_9139
+(0010,0020) Patient ID: 76-7734-5997-7051
+(0008,0020) Study Date: 20250917
+(0020,000D) Study Instance UID: N-2026-CONS-v1.2-9139-0
+(0008,1030) Study Description: XYZ-9139-LOG: No meaningful medical data in this record.
+---
+(0010,0010) Patient Name: Patient_2_4816
+(0010,0020) Patient ID: 57-2083-4663-7685
+(0008,0020) Study Date: 20260512
+(0020,000D) Study Instance UID: N-2026-CONS-v1.5-4816-1
+(0008,1030) Study Description: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_3_9263
+(0010,0020) Patient ID: 87-4614-9879-4816
+(0008,0020) Study Date: 20260531
+(0020,000D) Study Instance UID: N-2026-CONS-v1.5-9263-2
+(0008,1030) Study Description: {"diagnosis": "Diabetes", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_4_9260
+(0010,0020) Patient ID: 99-4012-6589-2140
+(0008,0020) Study Date: 20260509
+(0020,000D) Study Instance UID: N-2026-CONS-v1.7-9260-3
+(0008,1030) Study Description: {"diagnosis": "Fever", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_5_8694
+(0010,0020) Patient ID: 44-9068-3216-6143
+(0008,0020) Study Date: 20260209
+(0020,000D) Study Instance UID: N-2026-CONS-v1.1-8694-4
+(0008,1030) Study Description: {"diagnosis": "Asthma", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_6_5984
+(0010,0020) Patient ID: 78-1743-5444-2344
+(0008,0020) Study Date: 20251203
+(0020,000D) Study Instance UID: N-2026-CONS-v1.6-5984-5
+(0008,1030) Study Description: {"diagnosis": "Diabetes", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_7_6806
+(0010,0020) Patient ID: 83-8255-1650-2506
+(0008,0020) Study Date: 20251220
+(0020,000D) Study Instance UID: N-2026-CONS-v1.4-6806-6
+(0008,1030) Study Description: XYZ-6806-LOG: No meaningful medical data in this record.
+---
+(0010,0010) Patient Name: Patient_8_9764
+(0010,0020) Patient ID: 38-2800-7827-5746
+(0008,0020) Study Date: 20250811
+(0020,000D) Study Instance UID: N-2026-CONS-v1.7-9764-7
+(0008,1030) Study Description: {"diagnosis": "Hypertension", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_9_3991
+(0010,0020) Patient ID: 22-3213-2014-1570
+(0008,0020) Study Date: 20251021
+(0020,000D) Study Instance UID: N-2026-CONS-v1.1-3991-8
+(0008,1030) Study Description: {"diagnosis": "Fever", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_10_6456
+(0010,0020) Patient ID: 95-4509-8695-4975
+(0008,0020) Study Date: 20250702
+(0020,000D) Study Instance UID: N-2026-CONS-v1.5-6456-9
+(0008,1030) Study Description: {"diagnosis": "Hypertension", "treatment": "Prescribed rest", "visit_type": "OPD"}
+---
+(0010,0010) Patient Name: Patient_11_6185
+(0010,0020) Patient ID: 56-5664-9466-4302
+(0008,0020) Study Date: 20260321
+(0020,000D) Study Instance UID: N-2026-CONS-v1.0-6185-10
+(0008,1030) Study Description: XYZ-6185-LOG: No meaningful medical data in this record.
+---

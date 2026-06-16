@@ -1,0 +1,102 @@
+[
+  {
+    "patient_name": "Patient_1_8636",
+    "abha_id": "44-8815-5245-8506",
+    "clinical_payload": "{\"diagnosis\": \"Hypertension\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1526.51,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.9-8636-0",
+    "notice_date": "2025-09-28",
+    "data_purpose": "Consultation"
+  },
+  {
+    "patient_name": "Patient_2_5707",
+    "abha_id": "79-1431-4450-9005",
+    "clinical_payload": "{\"diagnosis\": \"Hypertension\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1311.83,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.6-5707-1",
+    "notice_date": "2025-09-28",
+    "data_purpose": "Consultation"
+  },
+  {
+    "patient_name": "Patient_3_2974",
+    "abha_id": "34-2018-7277-9505",
+    "clinical_payload": "{\"diagnosis\": \"Asthma\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1371.8,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.9-2974-2",
+    "notice_date": "2025-04-19",
+    "data_purpose": "Audit"
+  },
+  {
+    "patient_name": "Patient_4_1212",
+    "abha_id": "81-9526-3569-3999",
+    "clinical_payload": "{\"diagnosis\": \"Fever\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 975.55,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.8-1212-3",
+    "notice_date": "2025-06-07",
+    "data_purpose": "Emergency Care"
+  },
+  {
+    "patient_name": "Patient_5_7227",
+    "abha_id": "54-1677-9241-2738",
+    "clinical_payload": "Standard clinical examination.",
+    "bill_amount": 962.1,
+    "consent_status": "REVOKED",
+    "notice_id": "N-2026-CONS-v1.9-7227-4",
+    "notice_date": "2025-12-26",
+    "data_purpose": "Emergency Care"
+  },
+  {
+    "patient_name": "Patient_6_3645",
+    "abha_id": "30-2445-1590-5995",
+    "clinical_payload": "{\"diagnosis\": \"Asthma\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1992.36,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.7-3645-5",
+    "notice_date": "2025-12-06",
+    "data_purpose": "Audit"
+  },
+  {
+    "patient_name": "Patient_7_6823",
+    "abha_id": "94-8402-5626-3521",
+    "clinical_payload": "{\"diagnosis\": \"Fever\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1885.23,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.2-6823-6",
+    "notice_date": "2025-07-06",
+    "data_purpose": "Consultation"
+  },
+  {
+    "patient_name": "Patient_8_4884",
+    "abha_id": "21-4363-8503-7561",
+    "clinical_payload": "{\"diagnosis\": \"Asthma\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1541.39,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.4-4884-7",
+    "notice_date": "2026-04-29",
+    "data_purpose": "Treatment"
+  },
+  {
+    "patient_name": "Patient_9_3175",
+    "abha_id": "68-8664-6801-1162",
+    "clinical_payload": "Standard clinical examination.",
+    "bill_amount": 1517.99,
+    "consent_status": "REVOKED",
+    "notice_id": "N-2026-CONS-v1.0-3175-8",
+    "notice_date": "2025-10-16",
+    "data_purpose": "Audit"
+  },
+  {
+    "patient_name": "Patient_10_7392",
+    "abha_id": "21-2431-7786-7210",
+    "clinical_payload": "{\"diagnosis\": \"Hypertension\", \"treatment\": \"Prescribed rest\", \"visit_type\": \"OPD\"}",
+    "bill_amount": 1165.21,
+    "consent_status": "ACTIVE",
+    "notice_id": "N-2026-CONS-v1.8-7392-9",
+    "notice_date": "2026-03-22",
+    "data_purpose": "Treatment"
+  }
+]
