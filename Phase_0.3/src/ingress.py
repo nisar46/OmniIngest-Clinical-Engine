@@ -34,17 +34,43 @@ def detect_format(file_path: str) -> str:
     }
     return format_map.get(ext, f"Unknown ({ext.upper()})")
 
+def apply_canonical_mapping(df: pl.DataFrame) -> pl.DataFrame:
+    rename_dict = {}
+    for col in df.columns:
+        if col.lower() in COLUMN_MAPPING:
+            rename_dict[col] = COLUMN_MAPPING[col.lower()]
+    
+    df = df.rename(rename_dict)
+    
+    for canonical in COLUMN_MAPPING.values():
+        if canonical not in df.columns:
+            df = df.with_columns(pl.lit(None).alias(canonical))
+
+    if "Bill_Amount" in df.columns:
+        df = df.with_columns(
+            pl.col("Bill_Amount").cast(pl.Float64, strict=False).fill_null(0.0).alias("Bill_Amount")
+        )
+    return df
+
 def validate_dataframe(df: pl.DataFrame) -> pl.DataFrame:
     """Runs the Clinical Truth Gate & Compliance validation on a Polars DataFrame."""
-    # FIX 1: Strict ABHA ID Validation (must be exactly 14 digits, no letters)
+    # FIX 1: Official NHA ABHA Validation Framework
     df = df.with_columns(
         pl.col("ABHA_ID").cast(pl.Utf8).fill_null("").alias("ABHA_ID")
     )
+    
+    abha_stripped = pl.col("ABHA_ID").str.replace_all("-", "")
+    is_14_digits = (abha_stripped.str.len_chars() == 14) & (abha_stripped.str.contains(r"^\d{14}$"))
+    is_proper_format = pl.col("ABHA_ID").str.contains(r"^[0-9]{2}-[0-9]{4}-[0-9]{4}-[0-9]{4}$")
+    
+    abha_formatted = pl.when(~is_proper_format & is_14_digits).then(
+        abha_stripped.str.slice(0, 2) + "-" + abha_stripped.str.slice(2, 4) + "-" + abha_stripped.str.slice(6, 4) + "-" + abha_stripped.str.slice(10, 4)
+    ).otherwise(pl.col("ABHA_ID"))
+    
+    df = df.with_columns(abha_formatted.alias("ABHA_ID"))
+    
     df = df.with_columns(
-        (
-            (pl.col("ABHA_ID").str.len_chars() == 14) &
-            (pl.col("ABHA_ID").str.contains(r"^\d{14}$"))
-        ).alias("_ABHA_VALID")
+        pl.col("ABHA_ID").str.contains(r"^[0-9]{2}-[0-9]{4}-[0-9]{4}-[0-9]{4}$").fill_null(False).alias("_ABHA_VALID")
     )
 
     # FIX 2: Expanded Clinical Keyword List (more specific medical terms)
@@ -104,8 +130,9 @@ def run_ingress(file_path: str, autofill: bool = False):
     
     # 1. Loading
     try:
+        import streamlit as st
         if ext == '.csv':
-            df = pl.read_csv(file_path)
+            df = pl.scan_csv(file_path).collect()
         elif ext == '.json':
             df = pl.read_json(file_path)
         elif ext == '.xml':
@@ -117,32 +144,62 @@ def run_ingress(file_path: str, autofill: bool = False):
                 record = {sub.tag: (sub.text.strip() if sub.text else "") for sub in child}
                 records.append(record)
             df = pl.DataFrame(records) if records else pl.DataFrame()
+        elif ext in ['.xlsx', '.xls']:
+            try:
+                df = pl.read_excel(file_path)
+            except (ImportError, ModuleNotFoundError):
+                import streamlit as st
+                st.warning('⚠️ System Dependency Missing: Please run "pip install calamine xlsx2csv openpyxl" in your terminal to enable Excel data parsing.')
+                st.stop()
+        elif ext in ['.txt', '.pdf']:
+            import re
+            text = ""
+            if ext == '.pdf':
+                try:
+                    import PyPDF2
+                    with open(file_path, 'rb') as f:
+                        reader = PyPDF2.PdfReader(f)
+                        text = "\n".join([page.extract_text() for page in reader.pages])
+                except Exception as pdf_e:
+                    st.toast(f"Parsing Exception: {str(pdf_e)}")
+                    return pl.DataFrame()
+            else:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    text = f.read()
+            
+            # Split these unstructured payloads by explicit record delimiter anchors
+            blocks = re.split(r'\n={3,}\n?|\n-{3,}\n?|={10,}|-{10,}', text)
+            records = []
+            for block in blocks:
+                if not block.strip(): continue
+                record = {}
+                name_match = re.search(r'Patient Name:\s*(.+)', block, re.IGNORECASE)
+                abha_match = re.search(r'ABHA ID:\s*(.+)', block, re.IGNORECASE)
+                payload_match = re.search(r'Clinical Payload:\s*(.+)', block, re.IGNORECASE)
+                bill_match = re.search(r'Bill Amount:\s*([0-9.]+)', block, re.IGNORECASE)
+                consent_match = re.search(r'Consent Status:\s*(.+)', block, re.IGNORECASE)
+                notice_match = re.search(r'Notice ID:\s*(.+)', block, re.IGNORECASE)
+                
+                if name_match: record['patient_name'] = name_match.group(1).strip()
+                if abha_match: record['abha_id'] = abha_match.group(1).strip()
+                if payload_match: record['clinical_payload'] = payload_match.group(1).strip()
+                if bill_match: record['bill_amount'] = float(bill_match.group(1).strip())
+                if consent_match: record['consent_status'] = consent_match.group(1).strip()
+                if notice_match: record['notice_id'] = notice_match.group(1).strip()
+                if record: records.append(record)
+                
+            df = pl.DataFrame(records) if records else pl.DataFrame()
         else:
             # Fallback for other unsupported formats
             df = pl.read_csv(file_path)
     except Exception as e:
+        import streamlit as st
+        st.toast(f"Parsing Exception: {str(e)}")
         # Emergency fallback to empty DF if file is locked or missing
         return pl.DataFrame()
 
     # 2. Canonical Mapping
-    # Ensure all columns are renamed to uppercase canonical versions for DB compatibility
-    rename_dict = {}
-    for col in df.columns:
-        if col.lower() in COLUMN_MAPPING:
-            rename_dict[col] = COLUMN_MAPPING[col.lower()]
-    
-    df = df.rename(rename_dict)
-    
-    # Ensure critical columns exist
-    for canonical in COLUMN_MAPPING.values():
-        if canonical not in df.columns:
-            df = df.with_columns(pl.lit(None).alias(canonical))
-
-    # Type Normalization: XML parses everything as strings, cast numeric columns
-    if "Bill_Amount" in df.columns:
-        df = df.with_columns(
-            pl.col("Bill_Amount").cast(pl.Float64, strict=False).fill_null(0.0).alias("Bill_Amount")
-        )
+    df = apply_canonical_mapping(df)
 
     # 3. Clinical Truth Logic & Validation
     df = validate_dataframe(df)
