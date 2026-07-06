@@ -1,64 +1,47 @@
-# 🏗️ Phase 0.2: The Orchestration Layer (Data Pipeline Refactor)
-> **Status: Modular Refactor | Governance & Departmental Logic**
+# OmniIngest — Phase 0.2: Breaking the Monolith
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
-![Standard](https://img.shields.io/badge/ABDM-NRCeS_Compliant-green.svg?style=for-the-badge)
-![Security](https://img.shields.io/badge/DPDP-Rule_8.3_Kill_Switch-red.svg?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-
-## ⚡ Executive Summary
-In Phase 0.2, I refactored the initial "Monolith" into a modular **Orchestration Layer**. This version introduces a dedicated **Compliance Engine** (`compliance_engine.py`) and a specialized **Ingress Module** to handle complex clinical data streams.
-
-### 📉 The 6-Year Practical Journey
-This software is grounded in **6 years of clinical data operations (2020–2026)**. Having handled thousands of real-world records at **Rural Healthcare Setups**, I designed this ETL layer to solve the "Last Mile" problem: transforming messy, unstructured hospital data into clean **FHIR R5** compliant bundles.
-
-👉 *Explore the full analysis of my clinical operations journey in my detailed archive: [Clinical-Research-Archive](https://github.com/nisar46/Clinical-Research-Archive)*
+**Role:** Business Analyst | **Status:** Complete
 
 ---
 
-## 💎 Critical Features
+## What Changed from Phase 0.1
 
-### 1. Pipeline Modules (The Specialist Model)
-We moved away from a single-file system to a modular data engineering structure:
-- **The Translator (`universal_adapter.py`)**: Handles 10+ clinical formats.
-- **The Nurse (`ingress.py`)**: Performs data hygiene and "Smart-Scan" field recovery.
-- **The Security Guard (`compliance_engine.py`)**: Enforces DPDP rules and FHIR nesting.
+Phase 0.1 worked, but it was one big file doing everything at once. That's fine for testing, but it breaks the moment someone from pharmacy asks for something slightly different than what the hospital ward needs. So I stopped and redesigned it.
 
-### 2. Guardrails: The Rule 8.3 Kill Switch
-- **Cryptographic Masking**: Implements a dedicated "Kill Switch" for immediate PII isolation in the session state.
-- **Audit Lineage**: Every purge is tracked in a governance log, ensuring regulatory transparency as per the **DPDP Act 2023**.
-
-### 3. Zero-Failure Smart Ingress
-The `ingress.py` engine is built for the "Ground Truth" of hospital data:
-- **Heuristic Recovery**: If standard headers fail, the engine uses regex patterns to "rescue" critical identifiers like ABHA IDs.
-- **Format Agnostic**: Seamlessly handles JSON, XML, HL7, FHIR, and Clinical PDFs.
+Phase 0.2 splits the pipeline into specialist modules — each one does one job well. This came directly from watching how hospital departments actually hand off data. The ward nurse doesn't care about insurance billing fields. The billing clerk doesn't care about vitals. So why should a single script try to handle both at once?
 
 ---
 
-## 🏗️ Technical Stack
+## What Each Module Does
 
-| Component | Technology | Role |
-| :--- | :--- | :--- |
-| **Ingestion Engine** | `Polars` | High-performance data cleaning & normalization. |
-| **Logic Layer** | Python 3.10 | Business logic & Rule 8.3 enforcement. |
-| **Compliance** | `fhir.resources` | Strict FHIR R5 schema validation. |
-| **Interface** | `Streamlit` | Modern, reactive Clinical UI. |
+**universal_adapter.py — The Translator**
+
+This handles the messy part: different departments send data in different formats. CSV from the OPD counter. PDF from the radiology lab. HL7 from the pharmacy. JSON from the billing system. This module reads all of them and brings them into one consistent structure before anything else touches the data.
+
+**ingress.py — The Intake Nurse**
+
+Once data is in a consistent structure, this module runs the quality checks. It looks for missing ABHA IDs, incomplete consent records, and fields that don't match the expected clinical formats. If something is wrong, it doesn't just crash — it flags the record and routes it to the right triage desk so a clerk can fix it manually.
+
+**compliance_engine.py — The Governance Layer**
+
+This is where the DPDP Act rules actually get enforced. Every record that comes through here gets checked against Rule 8 — does this patient have active consent? If not, the record is quarantined. If consent is later revoked, the engine handles the cryptographic purge. Nothing gets written to the database until this module signs off.
+
+---
+
+## Why I Designed It This Way
+
+The biggest problem in hospital data work is that errors in one department's data corrupt records for everyone else. By separating each function into its own module, a failure in the pharmacy feed doesn't touch the ward records. Each module can be tested, fixed, or upgraded without breaking the rest.
+
+This is the architecture that eventually became the foundation for Phase 0.3 and the full OmniIngest engine.
 
 ---
 
-## 🚀 Installation & Launch
+## Key Acceptance Criteria Written (Jira Stories)
 
-### Setup
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nisar46/OmniIngest-Clinical-Engine.git
-   cd OmniIngest-Clinical-Engine/Phase_0.2
-   pip install -r requirements.txt
-   streamlit run app.py
-
-## 👨💻 Developer & Data Specialist
-**Nisar Ahmed**  
-*Clinical Data Specialist* 
+- Incoming records from any format must produce identical output structure before the ingress module runs
+- Records with missing or malformed ABHA IDs must be routed to the Identity Desk — no direct database writes allowed
+- The compliance engine must log every purge event with a timestamp before the delete executes
 
 ---
-*© 2026 Nisar Ahmed. Licensed under MIT.*
+
+**Nisar Ahmed** — Healthcare Business Analyst | [LinkedIn](https://www.linkedin.com/in/nisar-ahmed-8440763a3) | [Portfolio](https://nisar46.github.io/portfolio/)
