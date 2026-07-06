@@ -1,7 +1,7 @@
 # OmniIngest — ABDM 2.0 Clinical Data Ingestion Engine
 
-**Role:** Business Analyst & Functional Architect | **Status:** Complete (Phase 0.3)  
-**Author:** Nisar Ahmed — Healthcare BA | 13+ Years Hospital Floor Operations
+**Role:** Healthcare Functional Architect & Product Analyst | **Status:** Complete (Phase 0.3)  
+**Author:** Nisar Ahmed — Healthcare Functional Architect | 13+ Years Hospital Floor Operations
 
 ---
 
